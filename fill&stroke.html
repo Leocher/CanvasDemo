@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fill&stroke</title>
+    <script>
+        function init() {
+            var context = document.getElementById('canvas').getContext('2d');
+            context.beginPath();
+            context.strokeStyle = "rgb(200,0,0)";
+            context.arc(200,200,50,0,Math.PI,false);
+            context.fillStyle = "rgb(200,0,200)";
+            context.closePath();
+            context.fill();
+            context.strokeStyle = "rgb(255,0,0)";
+            context.lineWidth = 5;
+            context.stroke();
+        }
+    </script>
+    <style>
+        #canvas{
+            border: solid deepskyblue 2px;
+        }
+    </style>
+</head>
+<body onload="init();">
+<canvas id="canvas" width="400" height="300">
+    您的浏览器不支持HTML5的新元素canvas
+</canvas>
+</body>
+</html>
